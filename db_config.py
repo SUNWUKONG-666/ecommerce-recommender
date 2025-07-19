@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+	from dotenv import load_dotenv
 import os
 import mysql.connector
 
@@ -11,5 +11,6 @@ def get_db_connection():
         user=os.getenv("sql12790810"),
         password=os.getenv("MgP3LnRLQK"),
         database=os.getenv("sql12790810"),
-        port=int(os.getenv("DB_PORT", 3306))
+        port=int(os.getenv("DB_PORT", 3306)),
+	use_pure=True  # ✅ Forces TCP/IP connection
     )
